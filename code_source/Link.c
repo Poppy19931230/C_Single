@@ -13,7 +13,6 @@ int _Init()
     static int sockFd = -1;
     tv_out.tv_sec = 0;
     tv_out.tv_usec = 50;
-    readlink(&Path_c, );
     sockFd = socket(PF_UNIX, SOCK_DGRAM, 0);
     if (sockFd < 0)
     {

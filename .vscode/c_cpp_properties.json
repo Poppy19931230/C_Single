@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Users/WSD/Desktop/tool_chain/arm-linux-gnueabihf/include/c++/4.9.1",
+                "C:/Users/WSD/Desktop/tool_chain/arm-linux-gnueabihf/include/c++/4.9.1/arm-linux-gnueabihf"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\Users\\WSD\\Desktop\\tool_chain\\bin\\arm-linux-gnueabihf-g++.exe",
+            "cStandard": "gnu17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
