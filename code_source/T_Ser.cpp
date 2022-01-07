@@ -12,7 +12,7 @@
 #include <iostream>
 
 #define PORT 5200
-#define HOST 0
+//#define HOST 0
 #define QUEUE 20
 int conn;
 
