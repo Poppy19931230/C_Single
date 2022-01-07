@@ -28,6 +28,7 @@ int main()
     int ss = socket(AF_INET, SOCK_STREAM, 0); // 创建成功则返回一个socketfd
     printf("socketFd %d\n", ss);
     printf("master Only\n");
+    printf("Develop Test\n");
     struct sockaddr_in server_sockaddr;
     server_sockaddr.sin_family = AF_INET;
     server_sockaddr.sin_port = htons(PORT);
