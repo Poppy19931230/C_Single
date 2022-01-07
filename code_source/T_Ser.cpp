@@ -1,6 +1,6 @@
 #include <sys/types.h>
 #include <sys/socket.h>
-#include <stdio.h>
+//#include <stdio.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <unistd.h>
@@ -12,11 +12,13 @@
 #include <iostream>
 
 #define PORT 5200
+#define HOST 0
 #define QUEUE 20
 int conn;
 
 void thread_task()
 {
+	printf("other thread\n");
 }
 
 int main()
@@ -32,12 +34,12 @@ int main()
     server_sockaddr.sin_addr.s_addr = htonl(INADDR_ANY);
     if (bind(ss, (struct sockaddr *)&server_sockaddr, sizeof(server_sockaddr)) == -1)
     {
-        perror("bind");
+        perror("bind failure");
         exit(1);
     }
     if (listen(ss, QUEUE) == -1)
     {
-        perror("listen");
+        perror("listen failure");
         exit(1);
     }
 
@@ -46,7 +48,7 @@ int main()
     conn = accept(ss, (struct sockaddr *)&client_sockaddr, &length);
     if (conn < 0)
     {
-        perror("conn");
+        perror("conn failure");
         exit(1);
     }
 
